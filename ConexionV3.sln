@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31410.357
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConexionV3", "ConexionV3\ConexionV3.csproj", "{563205A6-61B0-40EB-91D9-4B7496FE9BED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{563205A6-61B0-40EB-91D9-4B7496FE9BED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{563205A6-61B0-40EB-91D9-4B7496FE9BED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{563205A6-61B0-40EB-91D9-4B7496FE9BED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{563205A6-61B0-40EB-91D9-4B7496FE9BED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2C89FBBE-9E81-49B4-8E65-6AE8E81658AB}
+	EndGlobalSection
+EndGlobal
