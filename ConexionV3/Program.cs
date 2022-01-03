@@ -22,9 +22,9 @@ namespace ConexionV3
                     );
 
                 DataSet dataSet = new DataSet();
-                adapter.Fill(dataSet,"Clientes");
+                adapter.Fill(dataSet,"ClientesUsa");
 
-                foreach (DataRow fila in dataSet.Tables["Clientes"].Rows)
+                foreach (DataRow fila in dataSet.Tables["ClientesUsa"].Rows)
                 {
                     String nombreCliente =fila.Field<String>("CompanyName");
                     Console.WriteLine("Cliente: " + nombreCliente);
