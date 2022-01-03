@@ -57,6 +57,9 @@ namespace ConexionV3
                 sqlParam = adapter.UpdateCommand.Parameters.Add("@oldContactName", SqlDbType.NVarChar, 30, "ContactName");
                 sqlParam.SourceVersion = DataRowVersion.Original;
 
+                //Gestionar el evento Para Concurrencia
+                adapter.RowUpdated += new SqlRowUpdatedEventHandler(filaActualizada);
+
                 //Cambiar datos cargados en memoria
                 Console.WriteLine( "");
                 Console.WriteLine( "Modificando lista de clientes USA: ");
@@ -82,6 +85,18 @@ namespace ConexionV3
             
             
 
+        }
+
+
+        //Metodo de concurrencia
+        private static void filaActualizada(object sender, SqlRowUpdatedEventArgs e)
+        {
+            if(e.RecordsAffected == 0) //Verificamos conflicto concurrencia
+            {
+                Console.WriteLine("Encontrado Conflicto concurrecncia optimista");
+                Console.WriteLine("  " + e.Row.ItemArray[0]);
+                e.Status = UpdateStatus.SkipCurrentRow;
+            }
         }
     }
 }
